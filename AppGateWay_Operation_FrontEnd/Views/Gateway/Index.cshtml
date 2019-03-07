@@ -1,0 +1,102 @@
+﻿@model AppGateWay_Operation_FrontEnd.Models.GatewayViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Configure Application Gateway to Cloud</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddProbe">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="operation" class="control-label"></label>
+                <input asp-for="operation" class="form-control" />
+                <span asp-validation-for="operation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubscriptionId" class="control-label"></label>
+                <input asp-for="SubscriptionId" class="form-control" />
+                <span asp-validation-for="SubscriptionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceGroupName" class="control-label"></label>
+                <input asp-for="ResourceGroupName" class="form-control" />
+                <span asp-validation-for="ResourceGroupName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApplicationGatewayName" class="control-label"></label>
+                <input asp-for="ApplicationGatewayName" class="form-control" />
+                <span asp-validation-for="ApplicationGatewayName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProbeName" class="control-label"></label>
+                <input asp-for="ProbeName" class="form-control" />
+                <span asp-validation-for="ProbeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Protocol" class="control-label"></label>
+                <input asp-for="Protocol" class="form-control" />
+                <span asp-validation-for="Protocol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Host" class="control-label"></label>
+                <input asp-for="Host" class="form-control" />
+                <span asp-validation-for="Host" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Probepath" class="control-label"></label>
+                <input asp-for="Probepath" class="form-control" />
+                <span asp-validation-for="Probepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HttpSettingsName" class="control-label"></label>
+                <input asp-for="HttpSettingsName" class="form-control" />
+                <span asp-validation-for="HttpSettingsName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HttpSettingsPort" class="control-label"></label>
+                <input asp-for="HttpSettingsPort" class="form-control" />
+                <span asp-validation-for="HttpSettingsPort" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="HttpSettingsProtocol" class="control-label"></label>
+                    <input asp-for="HttpSettingsProtocol" class="form-control" />
+                    <span asp-validation-for="HttpSettingsProtocol" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="BckendPoolName" class="control-label"></label>
+                <input asp-for="BckendPoolName" class="form-control" />
+                <span asp-validation-for="BckendPoolName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BckendipAddress" class="control-label"></label>
+                <input asp-for="BckendipAddress" class="form-control" />
+                <span asp-validation-for="BckendipAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RuleName" class="control-label"></label>
+                <input asp-for="RuleName" class="form-control" />
+                <span asp-validation-for="RuleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RulePath" class="control-label"></label>
+                <input asp-for="RulePath" class="form-control" />
+                <span asp-validation-for="RulePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="brearerToken" class="control-label"></label>
+                <input asp-for="brearerToken" class="form-control" />
+                <span asp-validation-for="brearerToken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="Create" onclick="location.href='@Url.Action("AddProbe", "Gateway")'">
+                    Create
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
